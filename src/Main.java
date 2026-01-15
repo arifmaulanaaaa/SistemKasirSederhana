@@ -15,9 +15,14 @@ public class Main {
         System.out.println("Jumlah beli: ");
         int jumlah = input.nextInt();
 
+        double total = harga * jumlah;
+
+        System.out.println("=== Struk Pembayaran ===");
         System.out.println("Item: " + barang);
         System.out.println("Harga: " + harga);
         System.out.println("Jumlah: " + jumlah);
+        System.out.println("========================");
+        System.out.println("Total bayar: " + total);
 
         input.close();
     }
