@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("=== Sistem Kasir Toko ===");
+        System.out.println("===== Sistem Kasir Toko =====");
 
         System.out.println("Nama barang: ");
         String barang = input.nextLine();
@@ -16,8 +16,14 @@ public class Main {
         int jumlah = input.nextInt();
 
         double total = harga * jumlah;
-        double diskon = total * 0.5;
-        double totalBayar = total - diskon;
+        double diskon = 0;
+        double totalBayar = 0;
+
+        if (total >= 100000) {
+            diskon = total * 0.05;
+            totalBayar = total - diskon;
+            System.out.println("Selamat anda mendapatkan diskon 5%!");
+        }
 
         System.out.println("=== Struk Pembayaran ===");
         System.out.println("Item: " + barang);
